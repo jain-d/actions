@@ -1,7 +1,7 @@
 name: temporal
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/10 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: new file every 5 minutes
+      - name: new file every 10 minutes
         run: | 
           filename=$(date +%H-%M)
           timestamp=$(date +'%B %d, %y at %H:%M')
